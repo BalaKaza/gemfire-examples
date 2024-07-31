@@ -33,4 +33,5 @@ wan/server-*/
 *.dat
 *.rej
 *.orig
+.java-version
 

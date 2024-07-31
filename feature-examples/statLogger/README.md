@@ -20,7 +20,7 @@ Successfully connected to: [host=cblack-z01, port=1099]
 
 You are connected to a cluster of version 10.1.0.
 
-gfsh>deploy --jar build\libs\statLogger.jar
+gfsh>deploy --jar ../build/libs/statLogger.jar
 
 Deploying files: statLogger.jar
 Total file size is: 0.01MB
