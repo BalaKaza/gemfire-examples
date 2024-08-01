@@ -39,12 +39,12 @@ mkdir -p ${APP_HOME}/data/server1
 mkdir -p ${APP_HOME}/data/server2
 
 
-/Users/bkazavenkata/workspace/gemfire/gemfire-assembly/build/install/vmware-gemfire/bin/gfsh --e "start locator ${LOCATOR_OPTS}"  &
+gfsh --e "start locator ${LOCATOR_OPTS}"  &
 
 waitForPort 10334
 
-/Users/bkazavenkata/workspace/gemfire/gemfire-assembly/build/install/vmware-gemfire/bin/gfsh --e "start server  ${SERVER_OPTS} --name=server1 --dir=${APP_HOME}/data/server1 --start-rest-api=true --http-service-port=7080" &
-/Users/bkazavenkata/workspace/gemfire/gemfire-assembly/build/install/vmware-gemfire/bin/gfsh --e "start server  ${SERVER_OPTS} --name=server2 --dir=${APP_HOME}/data/server2 --start-rest-api=true --http-service-port=7090" &
+gfsh --e "start server  ${SERVER_OPTS} --name=server1 --dir=${APP_HOME}/data/server1 --start-rest-api=true --http-service-port=7080" &
+gfsh --e "start server  ${SERVER_OPTS} --name=server2 --dir=${APP_HOME}/data/server2 --start-rest-api=true --http-service-port=7090" &
 
 wait
 
